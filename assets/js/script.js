@@ -8,7 +8,7 @@ function generatePassword() {
   //character length prompt
   let length = window.prompt("Please enter desired character length. Enter a number from 8 to 128.");
   //while loop for password length validation
-  while (length <= 7 || length >= 129) {
+  if (length <= 7 || length >= 129 || length !== isNaN) {
     window.alert("Invalid entry!");
     length = window.prompt("Please enter desired character length. Enter a number from 8 to 128.");
   }
@@ -25,8 +25,31 @@ function generatePassword() {
     specialCheck = window.confirm("Click the 'OK' button to include special characters (!, @, #, $, etc.) in your password.");
     upperCheck = window.confirm("Click the 'OK' button to include uppercase characters in your password.");
     lowerCheck = window.confirm("Click the 'OK' button to include lowercase characters in your password.");
-
   }
+  // array containing user chosen criteria
+  let pwCriteria = [];
+
+  if (numberCheck) {
+    pwCriteria = pwCriteria.concat(number);
+  }
+  if (specialCheck) {
+    pwCriteria = pwCriteria.concat(special);
+  }
+  if (upperCheck) {
+    pwCriteria = pwCriteria.concat(upper);
+  }
+  if (lowerCheck) {
+    pwCriteria = pwCriteria.concat(lower);
+  }
+
+  //string to be returned with randomized characters based on user selected criteria
+  let pwRand = "";
+
+  //for loop to iterate through criteria array and fill pwRand string
+  for (let i = 0; i < length; i++) {
+    pwRand = pwRand + pwCriteria[Math.floor(Math.random() * pwCriteria.length)];
+  }
+  return pwRand;
 }
 
 // Get references to the #generate element

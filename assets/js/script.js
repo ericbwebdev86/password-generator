@@ -9,8 +9,23 @@ function generatePassword() {
   let length = window.prompt("Please enter desired character length. Enter a number from 8 to 128.");
   //while loop for password length validation
   while (length <= 7 || length >= 129) {
-    // window.alert("Invalid entry!");
+    window.alert("Invalid entry!");
     length = window.prompt("Please enter desired character length. Enter a number from 8 to 128.");
+  }
+  //password criteria prompts
+  let numberCheck = window.confirm("Click the 'OK' button to include numbers in your password.");
+  let specialCheck = window.confirm("Click the 'OK' button to include special characters (!, @, #, $, etc.) in your password.");
+  let upperCheck = window.confirm("Click the 'OK' button to include uppercase characters in your password.");
+  let lowerCheck = window.confirm("Click the 'OK' button to include lowercase characters in your password.");
+
+  //password criteria validation
+  while (numberCheck === false && specialCheck === false && upperCheck === false && lowerCheck === false) {
+    window.alert("Invalid entry. At least one password complexity criterion must be selected.");
+    numberCheck = window.confirm("Click the 'OK' button to include numbers in your password.");
+    specialCheck = window.confirm("Click the 'OK' button to include special characters (!, @, #, $, etc.) in your password.");
+    upperCheck = window.confirm("Click the 'OK' button to include uppercase characters in your password.");
+    lowerCheck = window.confirm("Click the 'OK' button to include lowercase characters in your password.");
+
   }
 }
 

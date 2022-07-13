@@ -1,4 +1,14 @@
-# Password Generator
+# Password Generator ![Github license](https://img.shields.io/badge/license-MIT-green.svg)
+
+## Table of Contents
+[Purpose](#purpose) <br>
+[Built with](#built-with) <br>
+[Installation](#installation) <br>
+[Testing](#tests) <br>
+[Media](#media) <br>
+[Link to deployed app](#Link-to-deployed-app) <br>
+[Contact and Questions](#questions) <br>
+[License](#License) <br>
 
 ## purpose
 A website that allows the user to generate a randomized password with specified criteria through browser window prompts.
@@ -8,7 +18,14 @@ A website that allows the user to generate a randomized password with specified 
 * CSS
 * JavaScript
 
-## Screenshots
+## Installation
+### Clone Repository
+* *https:* git clone [https://github.com/ericbwebdev86/password-generator.git](https://github.com/ericbwebdev86/password-generator.git)
+
+## Tests
+There are no formal tests for this project
+
+## Media
 ### Landing Page
 ![image](https://user-images.githubusercontent.com/87142377/145694982-53fff7b9-92af-486a-a65f-6b209b93e9ec.png)
 
@@ -33,3 +50,10 @@ A website that allows the user to generate a randomized password with specified 
 
 ## Link to deployed app
 https://ericbwebdev86.github.io/password-generator/
+
+## Contact and Questions
+* Email: ericbwebdev86@gmail.com   
+* GitHub: https://github.com/ericbwebdev86
+
+## License
+MIT license is a short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
